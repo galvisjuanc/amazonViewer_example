@@ -206,18 +206,7 @@ public class Main {
 
 			if(response > 0) {
 				Book bookSelected = books.get(response-1);
-				bookSelected.setReaded(true);
-				Date dateI = bookSelected.startToSee(new Date());
-
-				for (int i = 0; i < 100000; i++) {
-					System.out.println("..........");
-				}
-
-				//Termine de verla
-				bookSelected.stopToSee(dateI, new Date());
-				System.out.println();
-				System.out.println("Leíste: " + bookSelected);
-				System.out.println("Por: " + bookSelected.getTimeReaded() + " milisegundos");
+				bookSelected.view();
 			}
 
 		}while(exit !=0);
