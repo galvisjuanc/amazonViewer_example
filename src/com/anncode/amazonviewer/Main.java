@@ -10,6 +10,7 @@ import com.anncode.amazonviewer.model.Chapter;
 import com.anncode.amazonviewer.model.Magazine;
 import com.anncode.amazonviewer.model.Movie;
 import com.anncode.amazonviewer.model.Serie;
+import com.anncode.amazonviewer.model.Film;
 import com.anncode.makereport.Report;
 import com.anncode.util.AmazonUtil;
 
@@ -17,7 +18,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Film film = new Movie("Batman", "Action", "ChristopherNolan",100, (short)1999);
+		film.view();
 
+		// Film film1 = new Chapter("Spiderman", "Action", "DanInosanto", 100, (short)1999, 3, null);
+		// film1.view();
 		showMenu();
 
 	}
@@ -105,18 +110,7 @@ public class Main {
 			}
 			if (response > 0) {
 				Movie movieSelected = movies.get(response-1);
-				movieSelected.setViewed(true);
-				Date dateI = movieSelected.startToSee(new Date());
-
-				for (int i = 0; i < 100000; i++) {
-					System.out.println("..........");
-				}
-
-				//Termine de verla
-				movieSelected.stopToSee(dateI, new Date());
-				System.out.println();
-				System.out.println("Viste: " + movieSelected);
-				System.out.println("Por: " + movieSelected.getTimeViewed() + " milisegundos");
+				movieSelected.view();
 			}
 
 
@@ -181,18 +175,7 @@ public class Main {
 
 			if(response > 0) {
 				Chapter chapterSelected = chaptersOfSerieSelected.get(response-1);
-				chapterSelected.setViewed(true);
-				Date dateI = chapterSelected.startToSee(new Date());
-
-				for (int i = 0; i < 100000; i++) {
-					System.out.println("..........");
-				}
-
-				//Termine de verla
-				chapterSelected.stopToSee(dateI, new Date());
-				System.out.println();
-				System.out.println("Viste: " + chapterSelected);
-				System.out.println("Por: " + chapterSelected.getTimeViewed() + " milisegundos");
+				chapterSelected.view();
 			}
 		}while(exit !=0);
 	}
