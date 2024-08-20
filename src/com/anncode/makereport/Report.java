@@ -7,6 +7,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+/**
+ * <h1> Report</h1>
+ * Report
+ * <p>
+ * Esta es la clase genera reportes en la extension deseada,
+ * Este tiene como parametros obligotorios los siguientes atributos
+ * @param content {@code String}
+ * @param extension {@code String}
+ * @param nameFile {@code String}
+ * @param title {@code String}
+ * @author Juaan_jcgc
+ * @version 1.1
+ * @since 2024
+ */
 public class Report {
 	
 	private String nameFile;
