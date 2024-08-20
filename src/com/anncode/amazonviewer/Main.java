@@ -31,11 +31,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Film film = new Movie("Batman", "Action", "ChristopherNolan",100, (short)1999);
-		film.view();
 
-		// Film film1 = new Chapter("Spiderman", "Action", "DanInosanto", 100, (short)1999, 3, null);
-		// film1.view();
 		showMenu();
 
 	}
