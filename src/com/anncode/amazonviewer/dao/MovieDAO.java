@@ -11,8 +11,7 @@ public interface MovieDAO {
     }
 
     default ArrayList<Movie> read() {
-        ArrayList<Movie> movies = new ArrayList<>();
-        return movies;
+        return new ArrayList<>();
     }
 
     private boolean getMovieViewed() {
